@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+    
+    </head>
+
+    <body id="main">
+        <button id="purple">purple</button>
+        <button id="black">black</button>
+        <button id="red">red</button>
+    <script>
+        
+        let fido = document.getElementById('main');
+        fido.addEventListener('click', changecolor);
+        
+        let purpleButton = document.getElementById('purple');
+        purpleButton.addEventListener('click', purplecolor);
+        
+         let blackButton = document.getElementById('black');
+        blackButton.addEventListener('click', blackcolor);
+        
+         let redButton = document.getElementById('red');
+        redButton.addEventListener('click', redcolor);
+        
+        function purplecolor(){
+            document.body.style.backgroundColor = 'purple';
+        }
+        
+        function blackcolor(){
+            document.body.style.backgroundColor = 'black';
+        }
+        
+        function redcolor(){
+            document.body.style.backgroundColor = 'red';
+        }
+        
+        
+        function changecolor(){
+            console.log('Working');
+         //   document.body.style.backgroundColor = 'Purple';
+        }
+        
+        
+    
+    </script>
+    
+    </body>
+    
+</html>
