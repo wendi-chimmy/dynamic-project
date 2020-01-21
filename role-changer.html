@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+        <style>
+            .hide{
+                display: none;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+        </div>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Are you creative or analytical?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+          
+        <button type="button" id="creative" class="btn btn-warning" data-dismiss="modal">Creative</button>
+        <button type="button" id="analytical" class="btn btn-primary" data-dismiss="modal">Analytical</button>
+      </div>
+    </div>
+  </div>
+</div>
+        
+       <div id="left" class="hide">   
+        <p>According to Sperry’s dated research, the left brain is also connected to:</p>
+            <ul>
+                <li>logic</li>
+                <li>sequencing</li>
+                <li>linear thinking</li>
+                <li>mathematics</li>
+                <li>facts</li>
+                <li>thinking in words</li>
+            </ul>
+        </div>
+        
+<div id="right" class="hide"> 
+<p>The right brain is more visual and intuitive. It’s sometimes referred to as the analog brain. It has a more creative and less organized way of thinking.</p>
+            <p>Sperry’s dated research suggests the right brain is also connected to:</p>
+            <ul>
+                <li>imagination</li>
+                <li>holistic thinking</li>
+                <li>intuition</li>
+                <li>arts</li>
+                <li>rhythm</li>
+                <li>nonverbal cues</li>
+                <li>feelings visualization</li>
+                <li>daydreaming</li>
+            </ul>
+        </div>
+        
+    
+        
+        
+        <script>
+            
+            let creativeButton = document.getElementById('creative');
+            let analyticalButton = document.getElementById('analytical');
+            let rightDiv = document.getElementById('right');
+            let leftDiv = document.getElementById('left');
+            
+            creativeButton.addEventListener('click',appear);
+            analyticalButton.addEventListener('click',appear);
+            
+            
+            
+            function appear(){
+                if(this.id == 'creative'){
+                    rightDiv.style.display = 'none';
+                    leftDiv.style.display = 'inline-block';
+                   }else{
+                       rightDiv.style.display = 'none';
+                       leftDiv.style.display = 'inline-block';
+                   }
+            }
+            
+            
+        </script>
+    </body>
+</html>
