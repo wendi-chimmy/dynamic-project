@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head> 
+    <title>Student Credit Score calculator</title> 
+    
+    
+    <style>
+body {
+  background-color:darksalmon;
+}
+        
+        #Recent {
+  border: 2px solid black;
+  padding: 25px;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+#Preferred {
+  border: 2px solid black;
+  padding: 25px;
+  background-repeat: no-repeat;
+  background-size: 300px 100px;
+}
+</style>
+    
+    
+    
+    
+    </head>
+<body>
+    <form name="formcalc">
+        
+        <h1>Stuent Credit Score</h1>
+    
+        <img src="credit-scorer-range-2-1-480x384.png" alt="Credit Score" width="250" height="250">
+        <div id="Recent">
+        Recent Credit Score: <input type = "text" name = "txtnum1">
+        <br>
+        </div>
+        <div id="Preferred">
+      Preferred Credit Score: <input type = "text" name = "txtnum2">
+        <br>
+        </div>
+        Result : <input type = "text" name = "txtres">
+        
+        <input type = "button" value = "calculate" onclick = "sumvalues()">
+           
+    </form>
+    <script type = "text/javascript">
+    
+        function sumvalues()
+        {
+          var num1, num2, res;
+          num1 = Number(document.formcalc.txtnum1.value);
+          num2 = Number(document.formcalc.txtnum2.value);
+          res = num1+num2;
+            document.formcalc.txtres.value = res;
+        }
+    
+    </script>
+    
+    
+    </body>  
+</html>
